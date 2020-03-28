@@ -10,7 +10,7 @@ export  async function main(event, context) {
   const data = JSON.parse(event.body);
 
   const params = {
-    TableName: process.env.DYANMODB_TABLE,
+    TableName: process.env.tableName,
 
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
